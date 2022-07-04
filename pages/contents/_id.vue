@@ -85,7 +85,7 @@ export default {
 				this.content = response.data.getContent;
 			} catch (err) {
 				this.$router.push("/contents");
-				//this.$toast.error("Erro ao efetuar a busca", { duration: 2000 });
+				this.$toast.error("Erro ao efetuar a busca", { duration: 2000 });
 				console.log(err);
 			}
 		},
