@@ -1,3 +1,5 @@
+$default-border: 2px solid rgba(0, 0, 0, 0.125);
+
 body {
     background-image: linear-gradient(to bottom right, #134E5E, #71B280);
     background-attachment: fixed;
@@ -21,7 +23,7 @@ body {
     flex-wrap: wrap;
 }
 
-.sub-card {
+.card {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -32,7 +34,7 @@ body {
     justify-content: space-between;
     background-color: #fff;
     background-clip: border-box;
-    border: 2px solid rgba(0, 0, 0, 0.125);
+    border: $default-border;
     border-radius: 0.25rem;
     min-height: 150px;
 }
@@ -43,7 +45,7 @@ body {
 
 .card-footer{
     padding: 5px;
-    border-top: 2px solid rgba(0, 0, 0, 0.125);
+    border-top: $default-border;
     text-align: center;
 }
 
@@ -59,13 +61,13 @@ body {
 .content-title{
     width: 100%;
     display: flex;
-    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+    border-bottom: $default-border;
     
 }
 
 .content-description{
     padding: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.125);
+    border: $default-border;
 }
 
 .content-embeddable{
@@ -77,11 +79,11 @@ body {
 
 .content-download{
     padding: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.125);
+    border: $default-border;
 }
 .content-footer{
     padding: 10px;
-    border: 2px solid rgba(0, 0, 0, 0.125);
+    border: $default-border;
 }
 
 .btn{
@@ -117,7 +119,6 @@ body {
 .flex-aling-center{
     justify-content: center;
 }
-
 
 
 @media (max-width:768px) {

@@ -1,29 +1,25 @@
 <template>
   <div class="grid flex-aling-center">
-    <!-- <div class="card"> -->
-      <div class="sub-card" v-for="(item, index) in contents" :key="index">
-        <div class="card-title">
-          <h4>{{item.title}}</h4>
-        </div>
-        <div class="card-footer">
-          <nuxt-link :to="'/contents/'+item.id">				
-            <button class="btn btn-primary">
-              Detalhes
-            </button>
-        </nuxt-link> 
-        </div>
+    <div class="card" v-for="(item, index) in contents" :key="index">
+      <div class="card-title">
+        <h4>{{ item.title }}</h4>
       </div>
-    <!-- </div> -->
+      <div class="card-footer">
+        <nuxt-link :to="'/contents/' + item.id">
+          <button class="btn btn-primary">Detalhes</button>
+        </nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "contents",
-  
+
   async asyncData({ $axios, $toast }) {
     var contents = [];
-    try{
+    try {
       var query = {
         query: `
           {
@@ -45,16 +41,15 @@ export default {
         query
       );
 
-      var contents = response.data.contents
-    }catch(err){
-      $toast.error('Erro ao efetuar a busca', {duration: 2000});
+      var contents = response.data.contents;
+    } catch (err) {
+      $toast.error("Erro ao efetuar a busca", { duration: 2000 });
       console.log(err);
     }
 
-		return{
-      contents
-    }
+    return {
+      contents,
+    };
   },
-  
 };
 </script>

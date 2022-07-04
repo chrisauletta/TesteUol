@@ -1,15 +1,13 @@
-import { setupTest, createPage } from '@nuxt/test-utils'
+import { shallowMount } from '@vue/test-utils'
+import Contents from '@/pages/contents'
+import flushPromises from 'flush-promises'
 
-describe('browser', () => {
-  setupTest({
-    testDir: '@/pages/contents',
-    fixture: 'contents',
-    browser: true
-  })
+describe('Contents', () => {
 
-  test('should render page', async () => {
-    const page = await createPage('/')
-    const body = await page.innerHTML('body')
-    expect(body).toContain('Works!')
-  })
+	test('Verifica se é um componente', async () => {
+		const wrapper = shallowMount(Contents);
+    await flushPromises();
+		expect(wrapper.vm).toBeTruthy()
+	})
+
 })
