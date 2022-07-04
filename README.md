@@ -7,7 +7,7 @@
 
 <hr>
 
-<h4>Intruções</h4>
+<h4>Instruções</h4>
 
 ```
 npm install
@@ -16,3 +16,4 @@ npm install
 npm run dev
 ```
 
+<h4>Acesse localhost:3000</h4>
