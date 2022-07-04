@@ -1,0 +1,127 @@
+body {
+    background-image: linear-gradient(to bottom right, #134E5E, #71B280);
+    background-attachment: fixed;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #404040;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sub-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    margin: 5px;
+    width: 23%;
+
+    justify-content: space-between;
+    background-color: #fff;
+    background-clip: border-box;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+    border-radius: 0.25rem;
+    min-height: 150px;
+}
+
+.card-title{
+    text-align: center;
+}
+
+.card-footer{
+    padding: 5px;
+    border-top: 2px solid rgba(0, 0, 0, 0.125);
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    width: 90%;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 0.25rem;
+    position: relative;
+}
+
+.content-title{
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.125);
+    
+}
+
+.content-description{
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+}
+
+.content-embeddable{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+}
+
+.content-download{
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+}
+.content-footer{
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.125);
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.btn-primary{
+    background-color:dodgerblue;
+    color: white;
+
+}
+
+.btn-primary:hover{
+    background-color:darkblue;
+}
+
+.btn-red{
+    background-color:tomato;
+    color: white;
+
+}
+
+.btn-red:hover{
+    background-color:brown;
+}
+
+.flex-aling-center{
+    justify-content: center;
+}
+
+
+
+@media (max-width:768px) {
+    .sub-card {
+        width: 100%;
+    }
+}
